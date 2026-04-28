@@ -7,8 +7,8 @@ const Education = () => {
   return (
     <>
       <div
-        className="w-full bg-cover bg-center px-4 py-4"
-        style={{ backgroundImage: `url(${assets.bg1})` }}
+        className="w-full bg-cover  bg-center px-4 py-4"
+        style={{ backgroundImage: `url(${assets.bkt1})` }}
       >
         {/* Header */}
         <div className="">
@@ -17,14 +17,14 @@ const Education = () => {
               <img
                 src={assets.book}
                 alt="logo"
-                className="w-10 h-10 rounded-full bg-gray-200"
+                className="w-10 h-10 invert rounded-full bg-gray-200"
               />
-              <h1 className="text-lg font-semibold">Spiritual School</h1>
+              <h1 className="text-lg font-semibold text-gray-100">Spiritual School</h1>
             </div>
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl z-50"
+              className="text-2xl text-white z-50"
             >
               {menuOpen ? "X" : "☰"}
             </button>
@@ -71,7 +71,7 @@ const Education = () => {
           </div>
 
           <div className="mt-6">
-            <p className="flex flex-col text-4xl text-black">
+            <p className="flex flex-col text-3xl text-black">
               A Journey of{" "}
               <span className="text-green-500">Spritual Growth</span>{" "}
               <span>and Inner Peace</span>
@@ -82,13 +82,13 @@ const Education = () => {
             </p>
 
             <div className=" flex gap-6 mt-6  justify-center">
-              <div className=" flex justify-center items-center gap-2  rounded-4xl bg-green-400  pl-6 pb-4 pr-6 pt-4">
-                <button className="text-xl">Explore More</button>
+              <div className=" flex justify-center items-center gap-2  rounded-4xl bg-green-400  pl-6 pt-2 pb-2 pr-6">
+                <button className="text-lg">Explore More</button>
                 <img src={assets.ar} className="w-9 invert" alt="->" />
               </div>
-              <div className=" flex justify-center items-center gap-2 bg-black/30 rounded-4xl  border border-white   pl-6 pb-4 pr-6 pt-4">
+              <div className=" flex justify-center items-center gap-2 bg-black/30 rounded-4xl  border border-white   pl-6 pr-6 pt-2 pb-2">
                 <img src={assets.cp} alt="->" className="w-9 invert-90" />
-                <button className="text-xl text-white ">Watch Video</button>
+                <button className="text-lg text-white ">Watch Video</button>
               </div>
             </div>
           </div>
