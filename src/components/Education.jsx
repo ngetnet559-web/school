@@ -81,7 +81,7 @@ const Education = () => {
               wisdom and hearts find peace.
             </p>
 
-            <div className=" flex gap-6 mt-6  justify-center">
+            <div className=" flex gap-6 mt-6  justify-center flex-wrap">
               <div className=" flex justify-center items-center gap-2  rounded-4xl bg-green-400  pl-6 pt-2 pb-2 pr-6">
                 <button className="text-lg">Explore More</button>
                 <img src={assets.ar} className="w-9 invert" alt="->" />
@@ -150,18 +150,21 @@ const Education = () => {
           </div>
         </div>
         <div className="relative">
-          <div className="w-[90%] ml-4 overflow-hidden rounded-3xl border">
-            <img
-              className="w-full h-full object-cover"
-              src={assets.or}
-              alt="image"
-            />
-          </div>
-          <div className="absolute right-0 top-60 rounded-2xl h-20 w-20 text-white p-4 flex flex-col items-center text-center justify-center bg-[#488856] text-sm">
-            {" "}
-            <span className="text-lg ">25+</span> years of teaching
-          </div>
-        </div>
+  <div className="w-[90%] mx-auto overflow-hidden rounded-3xl border">
+    <img
+      className="w-full h-full object-cover"
+      src={assets.or}
+      alt="image"
+    />
+  </div>
+
+  <div className="absolute -right-4 -bottom-6 rounded-2xl h-24 w-24 text-white p-3 flex flex-col items-center text-center justify-center bg-[#488856] text-sm shadow-lg">
+    <span className="text-xl font-bold">25+</span>
+    <span className="leading-tight">
+      Years of Spiritual Education
+    </span>
+  </div>
+</div>
       </div>
     </>
   );

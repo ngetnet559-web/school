@@ -50,7 +50,7 @@ const Students = () => {
         </div>
 
         {/* Slider */}
-        <div className="flex justify-center items-center gap-2 sm:gap-6 mt-8">
+        <div className="flex justify-center items-center gap-2 sm:gap-6 mt-8 flex-wrap">
           {/* Left Button */}
           <button
             onClick={prevImage}
