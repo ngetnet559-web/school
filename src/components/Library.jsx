@@ -8,8 +8,8 @@ const Library = () => {
     fetch("https://openlibrary.org/search.json?q=spirituality&limit=20")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
-        // console.log(data.docs);
+        console.log(data);
+        console.log(data.docs);
         setBooks(data.docs);
       });
   }, []);

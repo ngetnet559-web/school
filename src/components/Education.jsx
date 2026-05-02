@@ -19,7 +19,9 @@ const Education = () => {
                 alt="logo"
                 className="w-10 h-10 invert rounded-full bg-gray-200"
               />
-              <h1 className="text-lg font-semibold text-gray-100">Spiritual School</h1>
+              <h1 className="text-lg font-semibold text-gray-100">
+                Spiritual School
+              </h1>
             </div>
 
             <button
@@ -150,21 +152,19 @@ const Education = () => {
           </div>
         </div>
         <div className="relative">
-  <div className="w-[90%] mx-auto overflow-hidden rounded-3xl border">
-    <img
-      className="w-full h-full object-cover"
-      src={assets.or}
-      alt="image"
-    />
-  </div>
+          <div className="w-[90%] mx-auto overflow-hidden rounded-3xl border">
+            <img
+              className="w-full h-full object-cover"
+              src={assets.or}
+              alt="image"
+            />
+          </div>
 
-  <div className="absolute -right-4 -bottom-6 rounded-2xl h-24 w-24 text-white p-3 flex flex-col items-center text-center justify-center bg-[#488856] text-sm shadow-lg">
-    <span className="text-xl font-bold">25+</span>
-    <span className="leading-tight">
-      Years of Spiritual Education
-    </span>
-  </div>
-</div>
+          <div className="absolute -right-4 -bottom-6 rounded-2xl h-24 w-24 text-white p-3 flex flex-col items-center text-center justify-center bg-[#488856] text-sm shadow-lg">
+            <span className="text-xl font-bold">25+</span>
+            <span className="leading-tight">Years of Spiritual Education</span>
+          </div>
+        </div>
       </div>
     </>
   );

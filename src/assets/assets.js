@@ -22,6 +22,10 @@ import b5 from './b5.jpg'
 import b6 from './b6.jpg'
 import bkt1 from './bkt1.jpg'
 import bkt2 from './bkt2.jpg'
+import edu from './light-bulb.png'
+import counseling from './counseling.png'
+import community from './community.png'
+import growth from './plant.png'
 
 
 
@@ -49,7 +53,11 @@ import bkt2 from './bkt2.jpg'
     b5,
     b6,
     bkt1,
-    bkt2
+    bkt2,
+    edu,
+    counseling,
+    community,
+    growth
 }
 
 export default assets
