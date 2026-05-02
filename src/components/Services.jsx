@@ -28,7 +28,9 @@ const Services = () => {
                 />
               </div>
               <h1 className="font-bold mt-4 text-xl">Spiritual Education</h1>
-              <p className=" text-sm mt-2  max-w-xs">Classes and Teachings for inner Growth.</p>
+              <p className=" text-sm mt-2  max-w-xs">
+                Classes and Teachings for inner Growth.
+              </p>
             </div>
             <div className="flex flex-col items-center border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-sm">
               <div className="h-20 w-20 p-2 bg-gray-200 border border-gray-400 rounded-full flex items-center justify-center overflow-hidden">
@@ -39,7 +41,9 @@ const Services = () => {
                 />
               </div>
               <h1 className="font-bold mt-4 text-xl">Community Service</h1>
-              <p className="text-sm mt-2 max-w-xs">Serving others and our community.</p>
+              <p className="text-sm mt-2 max-w-xs">
+                Serving others and our community.
+              </p>
             </div>
             <div className="flex flex-col items-center border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-sm">
               <div className="h-20 w-20 p-2 bg-gray-200 border border-gray-400 rounded-full flex items-center justify-center overflow-hidden">
@@ -50,7 +54,9 @@ const Services = () => {
                 />
               </div>
               <h1 className="font-bold mt-4 text-xl">Counseling</h1>
-              <p className="text-sm mt-2 max-w-xs">Support for mental and emotional well-being.</p>
+              <p className="text-sm mt-2 max-w-xs">
+                Support for mental and emotional well-being.
+              </p>
             </div>
             <div className="flex flex-col items-center border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-sm">
               <div className="h-20 w-20 p-2 bg-gray-200 border border-gray-400 rounded-full flex items-center justify-center overflow-hidden">
@@ -61,7 +67,9 @@ const Services = () => {
                 />
               </div>
               <h1 className="font-bold mt-4 text-xl">Retreat Programs</h1>
-              <p className="text-sm mt-2 max-w-xs">Programs for reflection, healing and growth.</p>
+              <p className="text-sm mt-2 max-w-xs">
+                Programs for reflection, healing and growth.
+              </p>
             </div>
           </div>
         </div>
