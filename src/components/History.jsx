@@ -18,7 +18,7 @@ const History = () => {
           </p>
           <p className="mt-4">
             From a small group of seekers to a thriving spiritual community. our
-            journey continues with love and dedication
+            journey continues with love and dedication.
           </p>
           <button className="border rounded-4xl p-3 text-lg bg-black/40 mt-4 cursor-pointer hover:bg-black">
             Read Full Story
@@ -30,10 +30,10 @@ const History = () => {
 
           {/* Desktop horizontal line */}
           <div className="absolute left-33 right-30 top-10 hidden h-px bg-white/50 md:block">
-           <div className="absolute left-15 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
-          <div className="absolute left-60 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
-          <div className="absolute left-103 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
-          <div className="absolute left-150 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
+            <div className="absolute left-15 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
+            <div className="absolute left-60 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
+            <div className="absolute left-103 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
+            <div className="absolute left-150 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
           </div>
 
           <div className="relative z-10 flex max-w-[220px] flex-col items-center text-center text-white">

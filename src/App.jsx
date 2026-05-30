@@ -4,6 +4,8 @@ import Students from "./components/Students";
 import Library from "./components/Library";
 import Services from "./components/Services";
 import History from "./components/History";
+import Location from "./components/Location";
+import FooterSection from "./components/FooterSection";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <Library />
       <Services />
       <History />
+      <Location />
+      <FooterSection />
     </>
   );
 };

@@ -34,6 +34,16 @@ import mUser from "./people.png";
 import book2 from "./open-book.png";
 import logo2 from "./lotus.png";
 import logo3 from "./lotus2.png";
+import logo4 from "./logo4.png"
+import clock from "./clock.png"
+import location from "./location.png"
+import mail from "./mail.png"
+import send from "./send.png"
+import telephone from "./telephone.png"
+import tg from './telegram.png'
+import fb from './facebook.png'
+import is from './instagram.png'
+import yt from './youtube.png'
 
 const assets = {
   book,
@@ -72,6 +82,16 @@ const assets = {
   star,
   logo2,
   logo3,
+  logo4,
+  clock,
+  location,
+  mail,
+  telephone,
+  send,
+  tg,
+  is,
+  fb,
+  yt
 };
 
 export default assets;
