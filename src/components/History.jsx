@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import assets from "../assets/assets";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const timeline = [
   {
@@ -30,9 +34,81 @@ const timeline = [
 ];
 
 const History = () => {
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".history-content",
+        {
+          x: -70,
+          opacity: 0,
+        },
+        {
+          scrollTrigger: {
+            trigger: "#history",
+            start: "top 75%",
+          },
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".history-line",
+        {
+          scaleX: 0,
+          transformOrigin: "left center",
+        },
+        {
+          scrollTrigger: {
+            trigger: "#history",
+            start: "top 70%",
+          },
+          scaleX: 1,
+          duration: 1.3,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".history-item",
+        {
+          y: 60,
+          opacity: 0,
+          scale: 0.9,
+        },
+        {
+          scrollTrigger: {
+            trigger: "#history",
+            start: "top 65%",
+          },
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.9,
+          stagger: 0.18,
+          ease: "back.out(1.4)",
+        }
+      );
+
+      gsap.to(".history-icon", {
+        y: -8,
+        duration: 1.8,
+        repeat: -1,
+        yoyo: true,
+        stagger: 0.2,
+        ease: "sine.inOut",
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="history"
-      className="relative mt-6 w-full bg-cover bg-center px-4 py-10 md:px-10"
+    <section
+      id="history"
+      className="relative mt-6 w-full bg-cover bg-center px-4 py-10 md:px-10 overflow-hidden"
       style={{ backgroundImage: `url(${assets.bg2})` }}
     >
       {/* Overlay */}
@@ -40,7 +116,7 @@ const History = () => {
 
       <div className="relative z-10 flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
         {/* Top Content */}
-        <div className="text-gray-200 lg:w-[30%]">
+        <div className="history-content text-gray-200 lg:w-[30%]">
           <h1 className="text-center text-3xl font-bold text-[#1fff35] lg:text-left">
             Our History
           </h1>
@@ -54,20 +130,17 @@ const History = () => {
             our journey continues with love and dedication.
           </p>
 
-          <button className="mt-4 cursor-pointer rounded-full border border-white/30 bg-black/40 px-6 py-3 text-lg text-white transition hover:bg-black">
+          <button className="mt-4 cursor-pointer rounded-full border border-white/30 bg-black/40 px-6 py-3 text-lg text-white transition hover:bg-black hover:scale-105 duration-300">
             Read Full Story
           </button>
         </div>
 
         <div className="relative mt-16 lg:mt-0 lg:w-[70%]">
           {/* Desktop Line */}
-          <div className="absolute left-[10%] right-[10%] top-10 hidden h-px bg-white/50 md:block">
+          <div className="history-line absolute left-[10%] right-[10%] top-10 hidden h-px bg-white/50 md:block">
             <span className="absolute left-[10%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
-
             <span className="absolute left-[35%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
-
             <span className="absolute left-[62%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
-
             <span className="absolute left-[87%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
           </div>
 
@@ -78,10 +151,10 @@ const History = () => {
             {timeline.map((item, index) => (
               <div
                 key={index}
-                className="relative z-10 flex flex-col items-center text-center text-white"
+                className="history-item relative z-10 flex flex-col items-center text-center text-white"
               >
                 {/* Icon */}
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/50 p-4">
+                <div className="history-icon flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/50 p-4">
                   <img
                     src={item.icon}
                     alt={item.year}
