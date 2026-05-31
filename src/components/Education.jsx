@@ -220,7 +220,7 @@ const Education = () => {
       {/* About Section */}
       <div
         id="about"
-        className="flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-10 lg:px-20 mt-30"
+        className="flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-10 lg:px-20 mt-5 lg:mt-25"
       >
 
         {/* Left Content */}
