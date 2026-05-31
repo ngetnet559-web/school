@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import History from "./components/History";
 import Location from "./components/Location";
 import FooterSection from "./components/FooterSection";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (

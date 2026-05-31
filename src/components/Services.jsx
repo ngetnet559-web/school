@@ -3,7 +3,7 @@ import assets from "../assets/assets";
 
 const Services = () => {
   return (
-    <div>
+    <div id="services">
       <div>
         <div className="flex flex-col items-center pt-4">
           <h1 className="text-green-500 text-xl ">Our Services</h1>
@@ -17,8 +17,8 @@ const Services = () => {
           </div>
         </div>
 
-        <div>
-          <div className="flex flex-col gap-4 items-center lg:flex-row lg:justify-center lg:flex-wrap">
+        <div className="">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 mt-4 mb-10 md:mx-10 gap-6 place-content-center lg:flex-row lg:justify-center lg:flex-wrap">
             <div className="flex flex-col items-center border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-sm">
               <div className="h-20 w-20 p-2 bg-gray-200 border border-gray-400 rounded-full flex items-center justify-center overflow-hidden">
                 <img

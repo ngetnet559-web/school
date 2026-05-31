@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import assets from "../assets/assets";
 import studentsData from "../data/studentsData";
 
 const Students = () => {
   const [index, setIndex] = useState(0);
   const totalStu = studentsData.length;
+  const [visibleCount, setVisibleCount] = useState(1);
 
-  const visibleCount = 1;
+  useEffect(()=> {
+    const handleResize = () => {
+      if(window.innerWidth > 1024){
+        setVisibleCount(4);
+      }
+      else if(window.innerWidth >= 768) {
+        setVisibleCount(2);
+      }
+      else{
+        setVisibleCount(1);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // const visibleCount = 1;
 
   const nextImage = () => {
     setIndex((prev) => (prev + visibleCount) % totalStu);
@@ -23,8 +44,8 @@ const Students = () => {
   }
 
   return (
-    <div
-      className="relative bg-cover bg-center mt-10 pt-6 px-4 py-10 overflow-hidden"
+    <div id="students"
+      className="relative  bg-cover bg-center mt-15 pt-6 px-4 py-10 overflow-hidden"
       style={{ backgroundImage: `url(${assets.bk2})` }}
     >
       {/* Overlay Color */}
@@ -60,11 +81,11 @@ const Students = () => {
           </button>
 
           {/* Student Card */}
-          <div className="flex justify-center">
+          <div className="flex justify-center md:gap-5">
             {visibleStudents.map((student, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center text-center border border-gray-200 bg-[#f9f9f8] rounded-2xl px-5 py-6 shadow-sm w-[280px] sm:w-[340px]"
+                className="flex flex-col items-center text-center border border-gray-200 bg-[#f9f9f8] rounded-2xl  px-5 py-6 shadow-sm w-[280px] sm:w-[340px] md:w-[300px]"
               >
                 {/* Student Image */}
                 <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-2 border-gray-300 overflow-hidden">

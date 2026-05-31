@@ -19,14 +19,14 @@ const Library = () => {
   };
 
   return (
-    <div className="relative w-full bg-cover  bg-center px-4 py-4">
+    <div id="library" className="relative w-full bg-cover  bg-center px-4 py-4">
       <div className="absolute inset-0 bg-[#c0bdb8]/60"></div>
       <div className="relative  z-50 text-center mb-8">
         <h1 className="text-2xl mb-2">Our Library</h1>
         <p className="text-gray-700">Knowledge Awaits you </p>
       </div>
 
-      <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 z-50">
+      <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 z-50">
         {books.slice(0, visible).map((book) => (
           <div
             key={book.key}

@@ -1,168 +1,135 @@
-import React, { useState } from "react";
 import assets from "../assets/assets";
+import Navbar from "./Navbar";
 
 const Education = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <>
-      <div
-        className="w-full bg-cover  bg-center px-4 py-4"
+      <Navbar />
+
+      {/* Hero Section */}
+      <div id="home"
+        className="relative w-full bg-cover bg-center px-4 py-4 pt-28"
         style={{ backgroundImage: `url(${assets.bkt1})` }}
       >
-        {/* Header */}
-        <div className="">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <img
-                src={assets.book}
-                alt="logo"
-                className="w-10 h-10 invert rounded-full bg-gray-200"
-              />
-              <h1 className="text-lg font-semibold text-gray-100">
-                Spiritual School
-              </h1>
-            </div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl text-white z-50"
-            >
-              {menuOpen ? "X" : "☰"}
-            </button>
-          </div>
+        {/* Hero Content */}
+        <div className="relative z-10 mt-6 lg:ml-8 pb-10">
+          <p className="flex flex-col md:text-5xl text-3xl text-white font-semibold">
+            A Journey of{" "}
+            <span className="text-green-500">Spiritual Growth</span>{" "}
+            <span>and Inner Peace</span>
+          </p>
 
-          {/* Overlay */}
-          <div
-            onClick={() => setMenuOpen(false)}
-            className={`fixed inset-0 bg-black/30 transition-opacity duration-300 z-40 ${
-              menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
-          ></div>
+          <p className="text-gray-100 md:text-xl mt-4 max-w-2xl">
+            Welcome to our spiritual school, a place where knowledge meets
+            wisdom and hearts find peace.
+          </p>
 
-          {/* Mobile Menu */}
-          <div
-            className={`fixed top-0 right-0 h-screen w-64 bg-gray-100 p-5 rounded-l-2xl shadow-lg z-50
-        transition-transform duration-300
-        ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
-          >
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="absolute top-4 right-4 text-2xl"
-            >
-              X
+          <div className="flex gap-6 mt-10 justify-center lg:justify-start flex-wrap">
+            <button className="flex justify-center items-center gap-2 rounded-4xl bg-green-400 px-6 py-2 hover:scale-105 transition duration-300">
+              <span className="text-lg">Explore More</span>
+              <img src={assets.ar} className="w-9 invert" alt="arrow" />
             </button>
 
-            <ul className="mt-10 flex flex-col gap-4 text-gray-700">
-              <li>Home</li>
-              <li>About</li>
-              <li>Students</li>
-              <li>Library</li>
-              <li>Services</li>
-              <li>History</li>
-              <li>Location</li>
-            </ul>
-
-            <div className="mt-6 border-t pt-4">
-              <ul className="flex gap-4 text-sm text-gray-600">
-                <li>Telegram</li>
-                <li>Instagram</li>
-                <li>YouTube</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-6">
-            <p className="flex flex-col text-3xl text-black">
-              A Journey of{" "}
-              <span className="text-green-500">Spritual Growth</span>{" "}
-              <span>and Inner Peace</span>
-            </p>
-            <p className="text-gray-100">
-              Welcome to our spritual school, a place where knowledge meets
-              wisdom and hearts find peace.
-            </p>
-
-            <div className=" flex gap-6 mt-6  justify-center flex-wrap">
-              <div className=" flex justify-center items-center gap-2  rounded-4xl bg-green-400  pl-6 pt-2 pb-2 pr-6">
-                <button className="text-lg">Explore More</button>
-                <img src={assets.ar} className="w-9 invert" alt="->" />
-              </div>
-              <div className=" flex justify-center items-center gap-2 bg-black/30 rounded-4xl  border border-white   pl-6 pr-6 pt-2 pb-2">
-                <img src={assets.cp} alt="->" className="w-9 invert-90" />
-                <button className="text-lg text-white ">Watch Video</button>
-              </div>
-            </div>
+            <button className="flex justify-center items-center gap-2 bg-black/30 rounded-4xl border border-white px-6 py-2 hover:scale-105 transition duration-300">
+              <img src={assets.cp} alt="play" className="w-9 invert" />
+              <span className="text-lg text-white">Watch Video</span>
+            </button>
           </div>
         </div>
       </div>
-      <div className=" ml-4 mr-4 mt-4">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-center text-2xl font-bold ">About the school</h1>
-          <p className="flex flex-col text-3xl font-semibold text-gray-600">
-            Rooted in Tradition, <span>Commited to Tomorrow</span>{" "}
+
+      {/* About Section */}
+      <div id="about" className="flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-10 lg:px-20 mt-16">
+        {/* Left Content */}
+        <div className="flex flex-col gap-4 flex-1">
+          <h1 className="text-center lg:text-left md:text-3xl text-2xl font-bold">
+            About the School
+          </h1>
+
+          <p className="flex flex-col text-center lg:text-left text-3xl font-semibold text-gray-700">
+            Rooted in Tradition,
+            <span>Committed to Tomorrow</span>
           </p>
-          <p>
+
+          <p className="text-gray-600 text-center lg:text-left leading-7">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
             dignissimos cupiditate fugiat! Eaque, in obcaecati? Perferendis,
             delectus nobis. Dolores nam animi harum adipisci iure. Quo atque
             itaque rerum minus voluptate!
           </p>
 
-          <div className="">
-            <div className="flex gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full border flex items-center justify-center">
+          {/* Mission Vision Values */}
+          <div className="mt-6 flex flex-col lg:flex-row gap-6">
+            <div className="flex gap-4 items-start">
+              <div className="w-12 h-12 rounded-full border flex items-center justify-center shrink-0">
                 <img
                   src={assets.mission}
                   alt="mission icon"
-                  className="w-10 m-4 h-10 object-contain"
+                  className="w-8 h-8 object-contain"
                 />
               </div>
-              <div className="flex flex-col justify-center">
-                <h1 className="font-bold text-xl">Our Misson</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+              <div>
+                <h1 className="font-bold text-xl">Our Mission</h1>
+                <p className="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
               </div>
             </div>
-            <div className="flex gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full border flex items-center justify-center">
+
+            <div className="flex gap-4 items-start">
+              <div className="w-12 h-12 rounded-full border flex items-center justify-center shrink-0">
                 <img
                   src={assets.vision}
-                  alt="mission icon"
-                  className="w-10 m-4 h-10 object-contain"
+                  alt="vision icon"
+                  className="w-8 h-8 object-contain"
                 />
               </div>
-              <div className="flex flex-col justify-center">
-                <h1 className="font-bold text-xl">Vision</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+              <div>
+                <h1 className="font-bold text-xl">Our Vision</h1>
+                <p className="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
               </div>
             </div>
-            <div className="flex gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full border flex items-center justify-center">
+
+            <div className="flex gap-4 items-start">
+              <div className="w-12 h-12 rounded-full border flex items-center justify-center shrink-0">
                 <img
                   src={assets.value}
-                  alt="mission icon"
-                  className="w-10 m-4 h-10 object-contain"
+                  alt="value icon"
+                  className="w-8 h-8 object-contain"
                 />
               </div>
-              <div className="flex flex-col justify-center">
-                <h1 className="font-bold text-xl">Our Value</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+              <div>
+                <h1 className="font-bold text-xl">Our Values</h1>
+                <p className="text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative">
-          <div className="w-[90%] mx-auto overflow-hidden rounded-3xl border">
-            <img
-              className="w-full h-full object-cover"
-              src={assets.or}
-              alt="image"
-            />
-          </div>
 
-          <div className="absolute -right-4 -bottom-6 rounded-2xl h-24 w-24 text-white p-3 flex flex-col items-center text-center justify-center bg-[#488856] text-sm shadow-lg">
-            <span className="text-xl font-bold">25+</span>
-            <span className="leading-tight">Years of Spiritual Education</span>
+        {/* Right Image */}
+        <div className="relative flex-1 flex justify-center">
+          <div className="relative w-full max-w-md h-[420px] md:h-[500px]">
+            <img
+              className="w-full h-full object-cover rounded-3xl shadow-lg"
+              src={assets.or}
+              alt="school"
+            />
+
+            {/* Floating Card */}
+            <div className="absolute right-2 bottom-2 md:right-[-10%] md:bottom-[-8%] rounded-2xl h-24 w-24 text-white p-3 flex flex-col items-center text-center justify-center bg-[#488856] text-sm shadow-lg">
+              <span className="text-xl font-bold">25+</span>
+              <span>Years of Spiritual Education</span>
+            </div>
           </div>
         </div>
       </div>

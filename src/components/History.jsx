@@ -1,119 +1,107 @@
 import React from "react";
 import assets from "../assets/assets";
 
+const timeline = [
+  {
+    year: "1990",
+    icon: assets.tree,
+    text: "Our school was founded with a vision of spreading spiritual wisdom.",
+  },
+  {
+    year: "1998",
+    icon: assets.house,
+    text: "The first campus was built to welcome more students.",
+  },
+  {
+    year: "2008",
+    icon: assets.book2,
+    text: "Library and meditation center were established.",
+  },
+  {
+    year: "2018",
+    icon: assets.mUser,
+    text: "Our programs expanded to serve the global community.",
+  },
+  {
+    year: "2024",
+    icon: assets.star,
+    text: "Continuing the journey of peace, wisdom and compassion.",
+  },
+];
+
 const History = () => {
   return (
-    <div
-      className="relative w-full bg-cover  bg-center mt-6 px-4 py-4 "
+    <section id="history"
+      className="relative mt-6 w-full bg-cover bg-center px-4 py-10 md:px-10"
       style={{ backgroundImage: `url(${assets.bg2})` }}
     >
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-3 z-50">
-        <div className="text-gray-200">
-          <h1 className="text-3xl text-[#1fff35] text-center font-bold">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      <div className="relative z-10 flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+        {/* Top Content */}
+        <div className="text-gray-200 lg:w-[30%]">
+          <h1 className="text-center text-3xl font-bold text-[#1fff35] lg:text-left">
             Our History
           </h1>
-          <p className="text-3xl text-gray-300 mt-4 max-w-md ">
+
+          <p className="mt-4 max-w-md text-2xl font-semibold text-gray-300 md:text-3xl">
             A Legacy of Light and Learning
           </p>
-          <p className="mt-4">
-            From a small group of seekers to a thriving spiritual community. our
-            journey continues with love and dedication.
+
+          <p className="mt-4 max-w-2xl text-gray-200 leading-7">
+            From a small group of seekers to a thriving spiritual community,
+            our journey continues with love and dedication.
           </p>
-          <button className="border rounded-4xl p-3 text-lg bg-black/40 mt-4 cursor-pointer hover:bg-black">
+
+          <button className="mt-4 cursor-pointer rounded-full border border-white/30 bg-black/40 px-6 py-3 text-lg text-white transition hover:bg-black">
             Read Full Story
           </button>
         </div>
-        <div className="relative mt-8 flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-8">
+
+        <div className="relative mt-16 lg:mt-0 lg:w-[70%]">
+          {/* Desktop Line */}
+          <div className="absolute left-[10%] right-[10%] top-10 hidden h-px bg-white/50 md:block">
+            <span className="absolute left-[10%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
+
+            <span className="absolute left-[35%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
+
+            <span className="absolute left-[62%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
+
+            <span className="absolute left-[87%] -top-[5px] h-3 w-3 rounded-full bg-amber-300"></span>
+          </div>
+
           {/* Mobile vertical line */}
-          <div className="absolute top-20 bottom-42 left-1/2 w-px -translate-x-1/2 bg-white/70 md:hidden"></div>
+          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white/50 md:hidden"></div>
 
-          {/* Desktop horizontal line */}
-          <div className="absolute left-33 right-30 top-10 hidden h-px bg-white/50 md:block">
-            <div className="absolute left-15 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
-            <div className="absolute left-60 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
-            <div className="absolute left-103 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
-            <div className="absolute left-150 -top-1 border  rounded-full w-3 h-3 bg-amber-300"></div>
-          </div>
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-5">
+            {timeline.map((item, index) => (
+              <div
+                key={index}
+                className="relative z-10 flex flex-col items-center text-center text-white"
+              >
+                {/* Icon */}
+                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/50 p-4">
+                  <img
+                    src={item.icon}
+                    alt={item.year}
+                    className="h-full w-full object-contain invert"
+                  />
+                </div>
 
-          <div className="relative z-10 flex max-w-[220px] flex-col items-center text-center text-white">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/30 p-4">
-              <img
-                className="h-full w-full object-contain invert"
-                src={assets.tree}
-                alt=""
-              />
-            </div>
+                {/* Year */}
+                <h2 className="mt-3 text-lg font-bold">{item.year}</h2>
 
-            <h1 className="mt-3 text-lg font-bold">1990</h1>
-            <p className="mt-1 text-sm leading-relaxed">
-              Our school was founded with a vision of spreading spiritual
-              wisdom.
-            </p>
-          </div>
-
-          <div className="relative z-10 flex max-w-[220px] flex-col items-center text-center text-white">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/30 p-4">
-              <img
-                className="h-full w-full object-contain invert"
-                src={assets.house}
-                alt=""
-              />
-            </div>
-
-            <h1 className="mt-3 text-lg font-bold">1998</h1>
-            <p className="mt-1 text-sm leading-relaxed">
-              The first campus was built to welcome more students.
-            </p>
-          </div>
-
-          <div className="relative z-10 flex max-w-[220px] flex-col items-center text-center text-white">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/30 p-4">
-              <img
-                className="h-full w-full object-contain invert"
-                src={assets.book2}
-                alt=""
-              />
-            </div>
-
-            <h1 className="mt-3 text-lg font-bold">2008</h1>
-            <p className="mt-1 text-sm leading-relaxed">
-              Library and meditation center were established.
-            </p>
-          </div>
-
-          <div className="relative z-10 flex max-w-[220px] flex-col items-center text-center text-white">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/30 p-4">
-              <img
-                className="h-full w-full object-contain invert"
-                src={assets.mUser}
-                alt=""
-              />
-            </div>
-
-            <h1 className="mt-3 text-lg font-bold">2018</h1>
-            <p className="mt-1 text-sm leading-relaxed">
-              Our programs expanded to serve the global community.
-            </p>
-          </div>
-
-          <div className="relative z-10 flex max-w-[220px] flex-col items-center text-center text-white">
-            <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-black/30 p-4">
-              <img
-                className="h-full w-full object-contain invert"
-                src={assets.star}
-                alt=""
-              />
-            </div>
-
-            <h1 className="mt-3 text-lg font-bold">2024</h1>
-            <p className="mt-1 text-sm leading-relaxed">
-              Continuing the journey of peace, wisdom and compassion.
-            </p>
+                {/* Text */}
+                <p className="mt-1 max-w-[220px] text-sm leading-relaxed">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
